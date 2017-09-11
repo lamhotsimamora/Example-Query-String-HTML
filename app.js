@@ -1,17 +1,23 @@
 $(document).ready(function(){
+	/**
+	 * Enabled Console Log GF Javascript
+	 * @type {Boolean}
+	 */
+	run_console = true;
 
 	/**
-	 * Get Parameter From URl
+	 * Get Parameter From URl, You can change the parameter that you want
 	 * @type {[string]}
 	 */
-	var query_get = _GET('p');
+	var get_page = _GET('p');
+	var get_id   = _GET('id');
 
 	/**
 	 * Set const of parameter
 	 * @type {Array}
 	 */
 	const parameter = [
-		'home','profile','about','contact'
+		'home','profile','about','contact','user'
 	]
 
 	function setupQuery(q)
@@ -24,8 +30,17 @@ $(document).ready(function(){
 		switch(q) 
 		{
 		    case parameter[1]:
-				_loadDoc("component/"+parameter[1],"display");
-				_setTitle("Profile | Garuda Javascript");
+		    	if (get_id)
+		    	{
+		    		_loadDoc("component/"+parameter[4],"display");
+		    		_setTitle("User | Garuda Javascript");
+		    	}
+		    	else
+		    	{
+		    		_loadDoc("component/"+parameter[1],"display");
+		    		_setTitle("Profile | Garuda Javascript");
+		    	}
+				
 				break;
 		    case parameter[2]:
 				_loadDoc("component/"+parameter[2],"display");
@@ -34,6 +49,11 @@ $(document).ready(function(){
 		    case parameter[3]:
 				_loadDoc("component/"+parameter[3],"display");
 				_setTitle("Contact | Garuda Javascript");
+				break;
+			case parameter[4]:
+
+				_loadDoc("component/"+parameter[4],"display");
+				_setTitle("User | Garuda Javascript");
 				break;
 		    default:
 		    	 _loadDoc("component/"+parameter[0],"display");
@@ -44,7 +64,7 @@ $(document).ready(function(){
 
 	function setup()
 	{
-		setupQuery(query_get);
+		setupQuery(get_page);
 	}
 
 	setup();
@@ -58,13 +78,15 @@ $(document).ready(function(){
 	{
 		var u = _getValById("txt_search");
 
+
 		if (u === "")
 		{
 			_focus("txt_search");
 		}
 		else
 		{
-			setupQuery(u);
+			var	result = u.toLowerCase();
+			setupQuery(result);
 			_focus("txt_search");
 		}
 

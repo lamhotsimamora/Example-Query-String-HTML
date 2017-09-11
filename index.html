@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Example Query String HTML | Garuda Javascript</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
-	<script src="vendor/GF-1.js"></script>
+	<script src="https://cdn.rawgit.com/lamhotsimamora/GF-Javascript/master/JS/GF-1.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
@@ -77,9 +77,12 @@
 				<a class="btn btn-primary btn-xs" href="?p=home" role="button">Home</a>
 				<a class="btn btn-warning btn-xs" href="?p=profile" role="button">Profile</a>
 				<a class="btn btn-primary btn-xs" href="?p=about" role="button">About</a>
-				<a class="btn btn-warning btn-xs" href="?p=contact" role="button">Contact</a> || 
-				<button type="button" class="btn btn-default btn-xs" data-toggle="modal" id="btn_modal">
-				  Modal
+				<hr>
+				<a class="btn btn-warning btn-xs" href="?p=contact" role="button">Contact</a>
+				<a class="btn btn-danger btn-xs" href="?p=profile&id=12">User</a>
+				<hr>
+				<button type="button" class="btn btn-success btn-xs" data-toggle="modal" id="btn_modal">
+				  Information
 				</button>
 		  </p>
 		</div>
@@ -123,21 +126,26 @@
 	<div class="modal-dialog" role="document">
 	<div class="modal-content">
 	  <div class="modal-header">
-	    <h5 class="modal-title">Garuda Javascript</h5>
+	    <h5 class="modal-title">Query String URL || Garuda Javascript</h5>
 	    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	      <span aria-hidden="true">&times;</span>
 	    </button>
 	  </div>
 	  <div class="modal-body">
-	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    <p>You can easy create parameter of URL, like </br>
+			<code>
+				https://www.abc.com/?page=abc&id=1
+			</code>
+			</br></br>
+			Then, you can get the value of parameter URL with these</br>
+			<code>
+				var a = _GET('page'); </code></br>
+				<code> var b = _GET('id');</code>
+			
+	    </p>
 	  </div>
 	  <div class="modal-footer">
-	    <button type="button" class="btn btn-primary">Save</button>
+	<!--     <button type="button" class="btn btn-primary">Save</button> -->
 	    <button type="button" class="btn btn-secondary" id="btn_close">Close</button>
 	  </div>
 	</div>
