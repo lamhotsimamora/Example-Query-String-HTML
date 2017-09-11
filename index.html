@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Example Query String HTML | Garuda Javascript</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<script src="vendor/GF-1.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<meta name="og:image" 			content="https://raw.githubusercontent.com/lamhotsimamora/Example-Query-String-HTML/logo.png" />
+	<link rel="shortcut icon" type="image/png" href="ico.png"/>
+	<meta name="ROBOTS" 			content="index"/>
+	<meta name="Author" 			content="@lamhotsimamora" />
+	<meta name="copyright" 			content="Copyright@2017 | All Right Reserved" />
+	<meta property="og:title" 		content="Example Query String HTML | GARUDA QUERY JAVASCRIPT" />
+	<meta property="og:description" content="Example Query String HTML | GARUDA QUERY JAVASCRIPT" />
+	<meta property="og:name"      	content="Example Query String HTML | GARUDA QUERY JAVASCRIPT" />
+	<meta property="og:image"     	content="https://raw.githubusercontent.com/lamhotsimamora/Example-Query-String-HTML/master/logo.png" />
+	<meta name="language" 		  	content="Indonesian, English" />
+	<meta name="distribution" 	  	content="Global" />
+	<meta name="rating" 		  	content="General" />
+	<meta name="expires" 		  	content="1800" />
+	<meta name="theme-color"      	content="#ffc107"> 
+</head>
+<body>
+	<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#"><img src="https://raw.githubusercontent.com/lamhotsimamora/GF-Javascript/master/image/logo.png" width="60" height="30" class="d-inline-block align-top" alt="">
+			<a href=".">Garuda Javascript</a></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<hr>
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+			    <a class="nav-link" href="?p=home">Home <span class="sr-only"></span></a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="?p=profile">Profile</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="?p=about">About</a>
+			  </li>
+			   <li class="nav-item">
+			    <a class="nav-link" href="?p=contact">Contact</a>
+			  </li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+			  <input class="form-control mr-sm-6" type="text" placeholder="Type Home or Profile or About or Contact" id="txt_search" aria-label="Search"> &nbsp
+			  <button class="btn btn-outline-success my-2 my-sm-0" id="btn_search" type="button">Search</button>
+			</form>
+			</div>
+			</nav>
+			</br>
+	</div>
+	
+	<div class="container">
+		<div class="jumbotron">
+		  <h2 class="display-5"><a href="https://github.com/lamhotsimamora/Example-Query-String-HTML" target="_blank">Example Query String HTML</a></h2>
+		  <p class="lead">This DEMO is an example for create query parameter URL</p>
+		  <hr class="my-4">
+		  <p>Thank's to Bootstrap 4 || Support by Garuda Javascript  </p>
+			  	<span class="icon" style="color: #333;">
+				<i class="fa fa-github" aria-hidden="true"> <a href="https://github.com/lamhotsimamora/Example-Query-String-HTML" target="_blank"> Github</a></i>  
+				</span>
+
+				<span class="icon" style="color: #333;">
+				<i class="fa fa-code-fork" aria-hidden="true"> <a href="https://github.com/lamhotsimamora/Example-Query-String-HTML/fork" target="_blank"> Fork</a></i> 
+				</span>
+		  <hr>
+		  <p class="lead">
+				<a class="btn btn-primary btn-xs" href="?p=home" role="button">Home</a>
+				<a class="btn btn-warning btn-xs" href="?p=profile" role="button">Profile</a>
+				<a class="btn btn-primary btn-xs" href="?p=about" role="button">About</a>
+				<a class="btn btn-warning btn-xs" href="?p=contact" role="button">Contact</a> || 
+				<button type="button" class="btn btn-default btn-xs" data-toggle="modal" id="btn_modal">
+				  Modal
+				</button>
+		  </p>
+		</div>
+	</div>
+
+	<!-- ELEMENT FOR LOAD COMPONENT  -->
+	<div class="container">
+		<div class="well" id="display">
+			
+		</div>
+	</div>
+	<!-- ELEMENT FOR LOAD COMPONENT  -->
+	
+	<!-- Footer -->
+	<div class="container">
+		<hr>
+		<nav aria-label="Page navigation example">
+		  <ul class="pagination">
+		    <li class="page-item">
+		      <a class="page-link" href="#" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		        <span class="sr-only">Previous</span>
+		      </a>
+		    </li>
+		    <li class="page-item"><a class="page-link" href="#">1</a></li>
+		    <li class="page-item"><a class="page-link" href="#">2</a></li>
+		    <li class="page-item"><a class="page-link" href="#">3</a></li>
+		    <li class="page-item">
+		      <a class="page-link" href="#" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		        <span class="sr-only">Next</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+	</div>
+	<!-- Footer -->
+
+	<!-- MODAL -->
+	<div id="my_modal" class="modal">
+	<div class="modal-dialog" role="document">
+	<div class="modal-content">
+	  <div class="modal-header">
+	    <h5 class="modal-title">Garuda Javascript</h5>
+	    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	      <span aria-hidden="true">&times;</span>
+	    </button>
+	  </div>
+	  <div class="modal-body">
+	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	  </div>
+	  <div class="modal-footer">
+	    <button type="button" class="btn btn-primary">Save</button>
+	    <button type="button" class="btn btn-secondary" id="btn_close">Close</button>
+	  </div>
+	</div>
+	</div>
+	</div>
+	<!-- MODAL -->
+
+
+	<script src="app.js"></script>
+</body>
+</html>
